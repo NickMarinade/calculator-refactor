@@ -7,7 +7,7 @@
   <script src='./dependencies/evaluation.js'></script>
   <!-- this is the testing function for your logic -->
   <script src='./dependencies/testing.js'></script>
-  <link rel="style.css"/>
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -23,18 +23,19 @@
         Value 2: <input type="text" id="value2">
       </span>
       <!--Operator-->
-      Operator:
       <span class="box">
+        Operator:
         <select id="operator">
           <option value="Add">+</option>
           <option value="min">-</option>
           <option value="div">/</option>
           <option value="mul">*</option>
         </select>
+        <button id="calculate" type="button" onclick="calc()">Guess what</button>
       </span>
       <div class="result" id="result"></div>
-      <button type="button" onclick="calc()">Guess what</button>
     </div>
+    <footer></footer>
   </form>
   <script type="text/javascript" src="scripts/handler.js"></script>
   <script type="text/javascript" src="scripts/listener.js"></script>
