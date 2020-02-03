@@ -1,15 +1,44 @@
-<html>
+<html lang="en">
 
 <head>
-
+  <meta charset="utf-8"/>
+  <title>Calculator-Refactor</title>  
   <!-- this script is to help evaluate your deployed project -->
   <script src='./dependencies/evaluation.js'></script>
   <!-- this is the testing function for your logic -->
   <script src='./dependencies/testing.js'></script>
+  <link rel="style.css"/>
 
 </head>
 
 <body>
+  <form>
+    <!--Input-->
+
+    <div class="container">
+      <span class="box">
+        Value 1: <input type="text" id="value1">
+      </span>
+      <span class="box">
+        Value 2: <input type="text" id="value2">
+      </span>
+      <!--Operator-->
+      Operator:
+      <span class="box">
+        <select id="operator">
+          <option value="Add">+</option>
+          <option value="min">-</option>
+          <option value="div">/</option>
+          <option value="mul">*</option>
+        </select>
+      </span>
+      <div class="result" id="result"></div>
+      <button type="button" onclick="calc()">Guess what</button>
+    </div>
+  </form>
+  <script type="text/javascript" src="scripts/handler.js"></script>
+  <script type="text/javascript" src="scripts/listener.js"></script>
+  <script type="text/javascript" src="scripts/logic.js"></script>
 
 </body>
 
