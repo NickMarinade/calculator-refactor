@@ -18,6 +18,14 @@ const doMathTests = [
   { name: 'invalid - 3', args: ['minus', 0, 0], expected: 'invalid operation' },
   // write 7 more test cases for doMath
 
+  { name: 'add - 1', args: ['add', 1, 1], expected: 2 },
+  { name: 'add - 2', args: ['add', 2, 2], expected: 4 },
+  { name: 'add - 3', args: ['add', 3, 1], expected: 4 },
+  { name: 'min - 1', args: ['min', 2, 3], expected: -1 },
+  { name: 'min - 2', args: ['min', 4, 1], expected: 3 },
+  { name: 'min - 3', args: ['min', 6, 2], expected: 4 },
+  { name: 'div - 1', args: ['div', 8, 8], expected: 1 },
+
 ];
 
 // refactor the logic from the calculator tutorial into this function
