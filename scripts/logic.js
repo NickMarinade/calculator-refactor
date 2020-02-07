@@ -18,37 +18,24 @@ const doMathTests = [
   { name: 'invalid - 3', args: ['minus', 0, 0], expected: 'invalid operation' },
   // write 7 more test cases for doMath
 
-  { name: 'add - 1', args: ['add', 1, 1], expected: 2 },
-  { name: 'add - 2', args: ['add', 2, 2], expected: 4 },
-  { name: 'add - 3', args: ['add', 3, 1], expected: 4 },
-  { name: 'min - 1', args: ['min', 2, 3], expected: -1 },
-  { name: 'min - 2', args: ['min', 4, 1], expected: 3 },
-  { name: 'min - 3', args: ['min', 6, 2], expected: 4 },
-  { name: 'div - 1', args: ['div', 8, 8], expected: 1 },
+  { name: 'add - 4', args: ['add', 1, 1], expected: 2 },
+  { name: 'add - 5', args: ['add', 2, 2], expected: 4 },
+  { name: 'add - 6', args: ['add', 3, 1], expected: 4 },
+  { name: 'min - 4', args: ['min', 2, 3], expected: -1 },
+  { name: 'min - 5', args: ['min', 4, 1], expected: 3 },
+  { name: 'min - 6', args: ['min', 6, 2], expected: 4 },
+  { name: 'div - 4', args: ['div', 8, 8], expected: 1 },
 
 ];
 
-// refactor the logic from the calculator tutorial into this function
-function doMath(operation, a, b) {
-  // these if statements make sure all arguments are the correct type
-  // they will throw errors if your handler passes the wrong type arguments
-  if (typeof operation !== 'string') {
-    throw new Error('operation should be a string');
-  }
-  if (typeof a !== 'number') {
-    throw new Error('a should be a number');
-  }
-  if (typeof b !== 'number') {
-    throw new Error('b should be a number');
-  }
-  // write your code below this comment:
+// just to check something
 
-  function calc() {
+/*function testcalc() {
     var a = parseInt(document.querySelector("#value1").value);
     var b = parseInt(document.querySelector("#value2").value);
     var op = document.querySelector("#operator").value;
     var calculate;
-
+  
     if (op == "add") {
       calculate = a + b;
     } 
@@ -61,13 +48,50 @@ function doMath(operation, a, b) {
     else if (op == "mul") {
       calculate = a * b;
     }
+  
+    return calculate;
+}*/
 
-    document.querySelector("#result").innerHTML = calculate;
+// refactor the logic from the calculator tutorial into this function
+function doMath(operation, a, b) {
+  // these if statements make sure all arguments are the correct type
+  // they will throw errors if your handler passes the wrong type arguments
+  if (typeof operation !== 'string') {
+    throw new Error('operation should be a string');
+  } else if (
+    !( operation === "add" || operation === "min" || operation === "div" || operation === "mul" ) 
+  ) {
+    return "invalid operation"; //helps to pass invalid tests in doMathTests by adding new statement for operation, and returning it as invalid
+  } else if (typeof a !== 'number') {
+    throw new Error('a should be a number');
+  } else if (typeof b !== 'number') {
+    throw new Error('b should be a number');
+  }
+  // write your code below this comment:
+
+    var calculate; 
+    var a = parseInt(a);
+    var b = parseInt(b);
+
+    if (operation == "add") {
+      calculate = a + b;
+    } 
+    else if (operation == "min") {
+      calculate = a - b;
+    }
+    else if (operation == "div") {
+      calculate = a / b;
+    }
+    else if (operation == "mul") {
+      calculate = a * b;
+    }
+
+    return calculate;
   }
 
 
 
-}
+
 
 
 testing(doMath, doMathTests);
