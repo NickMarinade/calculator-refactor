@@ -1,9 +1,9 @@
-function calc(event) {
+function calc() {
   // read & process user input from event
 
-  var a = parseInt(document.querySelector("#value1").value);
-  var b = parseInt(document.querySelector("#value2").value);
-  var op = document.querySelector("#operator").value;
+    var a = parseInt(document.querySelector("#value1").value);
+    var b = parseInt(document.querySelector("#value2").value);
+    var op = document.querySelector("#operator").value;
 
   // pass user input through core logic
 
