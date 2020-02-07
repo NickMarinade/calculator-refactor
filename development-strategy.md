@@ -14,7 +14,7 @@ https://wireframe.cc/470XWa
 | --- | --- | --- |
 | input | id="value1" , id="value2" | takes numbers (1 and 2) given by user |
 | select | id="operator" | gives an option for user to choose wanted operation |
-| button | id="calculate" | runs calcukation process, attached to handler and listener |
+| button | id="calculate" | runs calculation process, attached to handler and listener |
 | div | id="result" | show end result for user on the page |
 
 ## Styling
