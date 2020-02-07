@@ -40,11 +40,12 @@ https://wireframe.cc/470XWa
 
 | syntax | parameters | return value | behavior |
 | --- | --- | --- | --- |
-| function calc() | a, b, operation |  | pass a, b, op as arguments to doMath |
+| function calc() | operation, a, b | boolean | pass a, b, operation as arguments to doMath |
 
 ## Logic
 
 | syntax | parameters | return value | behavior |
 | --- | --- | --- | --- |
-| | | | |
+| function doMath(operation , a, b) | operation, a, b | result of calculate, or invalid operation | runs code for calculate |
+| const doMathTests | | returns number or a string invalid operation | runs test cases for doMath function |
 
